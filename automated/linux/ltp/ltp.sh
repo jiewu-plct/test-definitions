@@ -207,7 +207,7 @@ get_tarfile() {
     mkdir "${TEST_DIR}"
     pushd "${TEST_DIR}" || exit 1
 
-    wget "${test_tarfile}"
+    wget -4 "${test_tarfile}"
     tar --strip-components=1 -Jxf "$(basename "${test_tarfile}")"
     popd || exit 1
 }
